@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		2780B53A1B3D2EA200C17728 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B5391B3D2EA200C17728 /* main.m */; };
 		2780B53D1B3D2EA200C17728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B53C1B3D2EA200C17728 /* AppDelegate.m */; };
-		2780B5401B3D2EA200C17728 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B53F1B3D2EA200C17728 /* ViewController.m */; };
-		2780B5431B3D2EA200C17728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2780B5411B3D2EA200C17728 /* Main.storyboard */; };
 		2780B5451B3D2EA200C17728 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2780B5441B3D2EA200C17728 /* Images.xcassets */; };
 		2780B5481B3D2EA200C17728 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2780B5461B3D2EA200C17728 /* LaunchScreen.xib */; };
 		2780B5541B3D2EA200C17728 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B5531B3D2EA200C17728 /* __Tests.m */; };
+		2780B5611B3D312C00C17728 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2780B5601B3D312C00C17728 /* News.storyboard */; };
+		2780B5641B3D315400C17728 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B5631B3D315400C17728 /* NewsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		2780B5391B3D2EA200C17728 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2780B53B1B3D2EA200C17728 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2780B53C1B3D2EA200C17728 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2780B53E1B3D2EA200C17728 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2780B53F1B3D2EA200C17728 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2780B5421B3D2EA200C17728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2780B5441B3D2EA200C17728 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2780B5471B3D2EA200C17728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2780B54D1B3D2EA200C17728 /* 新闻Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "新闻Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2780B5521B3D2EA200C17728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2780B5531B3D2EA200C17728 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		2780B5601B3D312C00C17728 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		2780B5621B3D315400C17728 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		2780B5631B3D315400C17728 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +81,9 @@
 		2780B5361B3D2EA200C17728 /* 新闻 */ = {
 			isa = PBXGroup;
 			children = (
+				2780B55D1B3D30D400C17728 /* Classes */,
 				2780B53B1B3D2EA200C17728 /* AppDelegate.h */,
 				2780B53C1B3D2EA200C17728 /* AppDelegate.m */,
-				2780B53E1B3D2EA200C17728 /* ViewController.h */,
-				2780B53F1B3D2EA200C17728 /* ViewController.m */,
-				2780B5411B3D2EA200C17728 /* Main.storyboard */,
 				2780B5441B3D2EA200C17728 /* Images.xcassets */,
 				2780B5461B3D2EA200C17728 /* LaunchScreen.xib */,
 				2780B5371B3D2EA200C17728 /* Supporting Files */,
@@ -117,6 +115,32 @@
 				2780B5521B3D2EA200C17728 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2780B55D1B3D30D400C17728 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2780B55E1B3D30D400C17728 /* News */,
+				2780B55F1B3D30D400C17728 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2780B55E1B3D30D400C17728 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				2780B5601B3D312C00C17728 /* News.storyboard */,
+				2780B5621B3D315400C17728 /* NewsTableViewController.h */,
+				2780B5631B3D315400C17728 /* NewsTableViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		2780B55F1B3D30D400C17728 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +223,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2780B5431B3D2EA200C17728 /* Main.storyboard in Resources */,
 				2780B5481B3D2EA200C17728 /* LaunchScreen.xib in Resources */,
+				2780B5611B3D312C00C17728 /* News.storyboard in Resources */,
 				2780B5451B3D2EA200C17728 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2780B5401B3D2EA200C17728 /* ViewController.m in Sources */,
+				2780B5641B3D315400C17728 /* NewsTableViewController.m in Sources */,
 				2780B53D1B3D2EA200C17728 /* AppDelegate.m in Sources */,
 				2780B53A1B3D2EA200C17728 /* main.m in Sources */,
 			);
@@ -244,14 +268,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2780B5411B3D2EA200C17728 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2780B5421B3D2EA200C17728 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2780B5461B3D2EA200C17728 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -352,6 +368,7 @@
 				INFOPLIST_FILE = "新闻/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,6 +379,7 @@
 				INFOPLIST_FILE = "新闻/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
