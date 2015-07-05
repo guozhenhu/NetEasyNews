@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272362341B495DF000EEB997 /* networkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 272362331B495DF000EEB997 /* networkTools.m */; };
 		2780B53A1B3D2EA200C17728 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B5391B3D2EA200C17728 /* main.m */; };
 		2780B53D1B3D2EA200C17728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B53C1B3D2EA200C17728 /* AppDelegate.m */; };
 		2780B5451B3D2EA200C17728 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2780B5441B3D2EA200C17728 /* Images.xcassets */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272362321B495DF000EEB997 /* networkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = networkTools.h; sourceTree = "<group>"; };
+		272362331B495DF000EEB997 /* networkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = networkTools.m; sourceTree = "<group>"; };
 		2780B5341B3D2EA200C17728 /* 新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2780B5381B3D2EA200C17728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2780B5391B3D2EA200C17728 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 		2780B55F1B3D30D400C17728 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				272362321B495DF000EEB997 /* networkTools.h */,
+				272362331B495DF000EEB997 /* networkTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272362341B495DF000EEB997 /* networkTools.m in Sources */,
 				2780B5641B3D315400C17728 /* NewsTableViewController.m in Sources */,
 				2780B53D1B3D2EA200C17728 /* AppDelegate.m in Sources */,
 				2780B53A1B3D2EA200C17728 /* main.m in Sources */,
