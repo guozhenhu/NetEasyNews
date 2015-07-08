@@ -30,8 +30,6 @@
 +(instancetype)newsWithDict:(NSDictionary *)dict;
 
 
-//在模型中实现懒加载
-@property (nonatomic, strong) NSArray *newsList;
 //加载指定url的新闻数组
 +(void)loadNewsListWithRULString:(NSString *)urlString;
 @end

@@ -8,6 +8,7 @@
 
 #import "News.h"
 #import "networkTools.h"
+#import <objc/runtime.h>
 
 @implementation News
 
@@ -17,7 +18,7 @@
     id obj = [[self alloc] init];
     
     //拿到我们想要的模型的属性key 字典转模型
-    NSArray *properties = @[@"title",@"digest",@"imgsrc",@"replyCount"];
+    NSArray *properties = [self loadProperties];
     for (NSString *key in properties) {
         //先判断dict是否存在对应的key  如果不上就什么都不做
         if (dict[key] != nil) {
@@ -29,10 +30,34 @@
     return obj;
 }
 
+//运用运行时 类方法  动态的获取、添加类的属性
++(NSArray *)loadProperties{
+    //参数1：要copy的类名
+    //参数2：属性计数指针（属性的数量）
+    unsigned int count = 0;
+    //找源文件  看接收类型 是C语言数组 count是属性的个数
+    objc_property_t *list = class_copyPropertyList([self class], &count);
+    
+    //遍历数组  获得每个属性
+    //创建可变字典 保存获得的属性名
+    NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:count];
+    for (unsigned int i = 0; i < count; i++) {
+        //获得属性
+        objc_property_t properties = list[i];
+        //获得属性名
+        const char *cName = property_getName(properties);
+        //把属性名添加到可变字典
+        [arrayM addObject:[NSString stringWithUTF8String:cName]];
+    }
+    return arrayM.copy;
+//    return @[@"title",@"digest",@"imgsrc",@"replyCount"];
+}
+
+
 //重写description方法 可以返回模型的属性列表
 -(NSString *)description{
     //根据我们想要的字典属性 创建字典
-    NSArray *properties = @[@"title",@"digest",@"imgsrc",@"replyCount"];
+    NSArray *properties = [self.class loadProperties];
     NSDictionary *dict = [self dictionaryWithValuesForKeys:properties];
     
     //返回格式 <类：指针> 字典
