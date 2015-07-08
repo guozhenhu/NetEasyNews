@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //AFN中 设置图片的网络缓存
+    //AFN 设置图片的网络缓存
     NSURLCache *cache = [[NSURLCache alloc]initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 *1024 *1024 diskPath:nil];
     [NSURLCache setSharedURLCache:cache];
     

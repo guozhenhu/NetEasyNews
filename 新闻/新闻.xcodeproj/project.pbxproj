@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		272362341B495DF000EEB997 /* networkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 272362331B495DF000EEB997 /* networkTools.m */; };
+		272362731B4D304C00EEB997 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 272362721B4D304C00EEB997 /* News.m */; };
+		272362781B4D386000EEB997 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 272362771B4D386000EEB997 /* NSArray+Log.m */; };
 		2780B53A1B3D2EA200C17728 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B5391B3D2EA200C17728 /* main.m */; };
 		2780B53D1B3D2EA200C17728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780B53C1B3D2EA200C17728 /* AppDelegate.m */; };
 		2780B5451B3D2EA200C17728 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2780B5441B3D2EA200C17728 /* Images.xcassets */; };
@@ -31,6 +33,10 @@
 /* Begin PBXFileReference section */
 		272362321B495DF000EEB997 /* networkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = networkTools.h; sourceTree = "<group>"; };
 		272362331B495DF000EEB997 /* networkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = networkTools.m; sourceTree = "<group>"; };
+		272362711B4D304C00EEB997 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		272362721B4D304C00EEB997 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		272362761B4D386000EEB997 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		272362771B4D386000EEB997 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		2780B5341B3D2EA200C17728 /* 新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2780B5381B3D2EA200C17728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2780B5391B3D2EA200C17728 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272362741B4D386000EEB997 /* NSArray NSDictionary类扩展 (使编码显示文本内容,方便调试查看) */ = {
+			isa = PBXGroup;
+			children = (
+				272362751B4D386000EEB997 /* Log */,
+			);
+			path = "NSArray NSDictionary类扩展 (使编码显示文本内容,方便调试查看)";
+			sourceTree = "<group>";
+		};
+		272362751B4D386000EEB997 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				272362761B4D386000EEB997 /* NSArray+Log.h */,
+				272362771B4D386000EEB997 /* NSArray+Log.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		2780B52B1B3D2EA200C17728 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +165,8 @@
 				2780B5601B3D312C00C17728 /* News.storyboard */,
 				2780B5621B3D315400C17728 /* NewsTableViewController.h */,
 				2780B5631B3D315400C17728 /* NewsTableViewController.m */,
+				272362711B4D304C00EEB997 /* News.h */,
+				272362721B4D304C00EEB997 /* News.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -149,6 +174,7 @@
 		2780B55F1B3D30D400C17728 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				272362741B4D386000EEB997 /* NSArray NSDictionary类扩展 (使编码显示文本内容,方便调试查看) */,
 				272362321B495DF000EEB997 /* networkTools.h */,
 				272362331B495DF000EEB997 /* networkTools.m */,
 			);
@@ -307,8 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272362731B4D304C00EEB997 /* News.m in Sources */,
 				272362341B495DF000EEB997 /* networkTools.m in Sources */,
 				2780B5641B3D315400C17728 /* NewsTableViewController.m in Sources */,
+				272362781B4D386000EEB997 /* NSArray+Log.m in Sources */,
 				2780B53D1B3D2EA200C17728 /* AppDelegate.m in Sources */,
 				2780B53A1B3D2EA200C17728 /* main.m in Sources */,
 			);
