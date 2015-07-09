@@ -30,8 +30,24 @@
     return obj;
 }
 
-//运用运行时 类方法  动态的获取、添加类的属性
+//加载属性
+//设置c中 属性的key
+const char *kPropertiesKey = "kPropertiesKey";
 +(NSArray *)loadProperties{
+    
+    //运行时， 利用关联对象 动态添加类的属性
+    //参数1：属性关联的对象
+    //参数2：key 属性的key
+    //获取关联对象 是一个数组
+   NSArray *pList = objc_getAssociatedObject(self, kPropertiesKey);
+    //如果取到关联对象 就返回这个
+    if (pList != nil) {
+        return pList;
+    }
+    //在下面设置关联对象
+    
+    
+    //运用运行时 类方法  动态的获取类的属性
     //参数1：要copy的类名
     //参数2：属性计数指针（属性的数量）
     unsigned int count = 0;
@@ -49,7 +65,22 @@
         //把属性名添加到可变字典
         [arrayM addObject:[NSString stringWithUTF8String:cName]];
     }
-    return arrayM.copy;
+    
+    //c语言copy  要手动释放对象
+    free(list);
+    
+    
+    //设置关联对象
+    //参数1：属性关联的对象
+    //参数2：key
+    //参数3：值
+    //参数4：引用策略
+    objc_setAssociatedObject(self, kPropertiesKey, arrayM,OBJC_ASSOCIATION_COPY_NONATOMIC);
+    //这样就相当于我们设置了一个关联对象  这个关联对象里记录了类中的所有的属性
+    //我们就可以返回这个关联对象即可
+    return objc_getAssociatedObject(self, kPropertiesKey);
+    
+//    return arrayM.copy;
 //    return @[@"title",@"digest",@"imgsrc",@"replyCount"];
 }
 
